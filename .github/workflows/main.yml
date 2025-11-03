@@ -1,0 +1,42 @@
+# name of the workflow/pipline
+name: github action demo1 pipline
+
+#trigger event          ---> when github action calls this workflow
+on:
+    push:
+        branches:
+        - main
+
+jobs:
+    demo-jobs:
+        runs-on: ubuntu_latest
+
+        steps:
+            - name: checkout code
+              uses: action/checkout@v2
+            - name: print message
+              run: echo "welcome to github actions"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
