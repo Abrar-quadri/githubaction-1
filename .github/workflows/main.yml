@@ -1,5 +1,5 @@
-# name of the workflow/pipline
-name: github action demo1 pipline
+# name of the workflow/pipeline
+name: github action demo1 pipeline
 
 #trigger event          ---> when github action calls this workflow
 on:
