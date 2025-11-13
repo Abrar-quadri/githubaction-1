@@ -1,25 +1,33 @@
 # name of the workflow/pipeline
+#!1. This is just the name of your workflow. You’ll see this name in GitHub’s Actions tab.
 name: github action demo1 pipeline
 
 # trigger event ---> when GitHub Action runs this workflow
+#!2. It runs automatically whenever you push code to the main branch.
 on:
   push:
     branches:
       - main
 
+#!3. It starts a job (like a task) that runs on a virtual computer (Ubuntu = Linux system).         create job
 jobs:
   demo-job:
     runs-on: ubuntu-latest
-
+#!4. GitHub will download your project code into that virtual machine so it can access your files.
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+    
+#!5. It simply prints a message — like running a command in terminal.
       - name: Print message
         run: echo "Welcome to GitHub Actions!"
 
 
-
+#?🧩 In short:
+# ✅ When you push code to main →
+# ✅ GitHub starts a Linux system →
+# ✅ Downloads your project →
+# ✅ Prints “Welcome to GitHub Actions!”
 
 
 
